@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.frame_layout, timeTableFragment).commitAllowingStateLoss();

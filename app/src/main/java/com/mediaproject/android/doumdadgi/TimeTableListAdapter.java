@@ -23,7 +23,6 @@ public class TimeTableListAdapter extends RecyclerView.Adapter<TimeTableListAdap
 
         public ViewHolder(View itemView) {
             super(itemView);
-            System.out.println("TimeTableViewHolder.ViewHolder 생성자 호출");
             lecture_name = itemView.findViewById(R.id.text_lecture_name);
             classroom = itemView.findViewById(R.id.text_classroom);
             schedule = itemView.findViewById(R.id.text_schedule);
@@ -32,7 +31,6 @@ public class TimeTableListAdapter extends RecyclerView.Adapter<TimeTableListAdap
     }
 
     public TimeTableListAdapter(ArrayList<TimeTableListItemViewModel> list) {
-        System.out.println("TimeTableListAdapter 생성자 호출, list.size() == " + list.size());
         this.mData = list;
     }
 
@@ -55,7 +53,6 @@ public class TimeTableListAdapter extends RecyclerView.Adapter<TimeTableListAdap
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        System.out.println("onBinderViewHolder 호출");
         holder.lecture_name.setText(mData.get(position).getLectureName());
         holder.classroom.setText(mData.get(position).getClassroom());
         holder.schedule.setText(mData.get(position).getSchedule());
