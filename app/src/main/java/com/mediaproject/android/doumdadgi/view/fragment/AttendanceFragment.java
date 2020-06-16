@@ -1,4 +1,4 @@
-package com.mediaproject.android.doumdadgi.view;
+package com.mediaproject.android.doumdadgi.view.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

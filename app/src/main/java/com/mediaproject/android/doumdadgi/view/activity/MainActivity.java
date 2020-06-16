@@ -1,4 +1,4 @@
-package com.mediaproject.android.doumdadgi.view;
+package com.mediaproject.android.doumdadgi.view.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +10,10 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.mediaproject.android.doumdadgi.R;
+import com.mediaproject.android.doumdadgi.view.fragment.AttendanceFragment;
+import com.mediaproject.android.doumdadgi.view.fragment.NoticeFragment;
+import com.mediaproject.android.doumdadgi.view.fragment.TimeTableFragment;
+import com.mediaproject.android.doumdadgi.view.fragment.UserInfoFragment;
 
 public class MainActivity extends AppCompatActivity {
     private FragmentManager fragmentManager = getSupportFragmentManager();
@@ -22,8 +26,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        getSupportActionBar().hide();
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
         FragmentTransaction transaction = fragmentManager.beginTransaction();

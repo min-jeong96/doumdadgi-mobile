@@ -6,7 +6,7 @@ import android.widget.FrameLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.mediaproject.android.doumdadgi.view.AttendanceAccessDialogFragment;
+import com.mediaproject.android.doumdadgi.view.fragment.AttendanceAccessDialogFragment;
 import com.mediaproject.android.doumdadgi.model.AttendanceModel;
 import com.mediaproject.android.doumdadgi.R;
 
