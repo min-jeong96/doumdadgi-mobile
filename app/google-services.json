@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "455650223834",
+    "firebase_url": "https://doumdadgi-b620c.firebaseio.com",
+    "project_id": "doumdadgi-b620c",
+    "storage_bucket": "doumdadgi-b620c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455650223834:android:50b37b86ca367945cf27e3",
+        "android_client_info": {
+          "package_name": "com.mediaproject.android.doumdadgi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "455650223834-gj5to5s66upssi9kv2d39oihol1vl3rl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mediaproject.android.doumdadgi",
+            "certificate_hash": "f21845242488d35332bc977db54d22671bb9fcae"
+          }
+        },
+        {
+          "client_id": "455650223834-mekd6vcfin6onmmvn2je3c1qvlcoiveo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAba5g6svm-oLE1_7UG4VoFIVx0G6mWWew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "455650223834-mekd6vcfin6onmmvn2je3c1qvlcoiveo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
