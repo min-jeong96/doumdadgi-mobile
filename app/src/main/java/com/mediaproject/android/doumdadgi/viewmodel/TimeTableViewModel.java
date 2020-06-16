@@ -1,4 +1,4 @@
-package com.mediaproject.android.doumdadgi;
+package com.mediaproject.android.doumdadgi.viewmodel;
 
 import android.view.View;
 import android.widget.ImageButton;
@@ -6,6 +6,10 @@ import android.widget.Toast;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.mediaproject.android.doumdadgi.R;
+import com.mediaproject.android.doumdadgi.view.adapter.TimeTableListAdapter;
+import com.mediaproject.android.doumdadgi.model.TimeTableModel;
 
 public class TimeTableViewModel {
     private View view;

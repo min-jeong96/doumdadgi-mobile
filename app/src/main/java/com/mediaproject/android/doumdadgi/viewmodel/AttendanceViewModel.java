@@ -1,10 +1,14 @@
-package com.mediaproject.android.doumdadgi;
+package com.mediaproject.android.doumdadgi.viewmodel;
 
 import android.view.View;
 import android.widget.FrameLayout;
 
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
+import com.mediaproject.android.doumdadgi.view.AttendanceAccessDialogFragment;
+import com.mediaproject.android.doumdadgi.model.AttendanceModel;
+import com.mediaproject.android.doumdadgi.R;
 
 public class AttendanceViewModel {
     private View view;
@@ -14,7 +18,7 @@ public class AttendanceViewModel {
     private FrameLayout btn_access_attendance;
     private FrameLayout btn_attendance_list;
 
-    AttendanceViewModel(View view, FragmentManager fragmentManager) {
+    public AttendanceViewModel(View view, FragmentManager fragmentManager) {
         this.view = view;
         this.fragmentManager = fragmentManager;
         this.attendanceModel = new AttendanceModel();

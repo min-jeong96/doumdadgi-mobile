@@ -1,4 +1,4 @@
-package com.mediaproject.android.doumdadgi;
+package com.mediaproject.android.doumdadgi.view;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,13 +9,14 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.mediaproject.android.doumdadgi.R;
 
 public class MainActivity extends AppCompatActivity {
     private FragmentManager fragmentManager = getSupportFragmentManager();
-    private TimeTableFragment   timeTableFragment   = new TimeTableFragment();
-    private AttendanceFragment  attendanceFragment  = new AttendanceFragment();
-    private NoticeFragment      noticeFragment      = new NoticeFragment();
-    private UserInfoFragment    userInfoFragment    = new UserInfoFragment();
+    private TimeTableFragment timeTableFragment   = new TimeTableFragment();
+    private AttendanceFragment attendanceFragment  = new AttendanceFragment();
+    private NoticeFragment noticeFragment      = new NoticeFragment();
+    private UserInfoFragment userInfoFragment    = new UserInfoFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

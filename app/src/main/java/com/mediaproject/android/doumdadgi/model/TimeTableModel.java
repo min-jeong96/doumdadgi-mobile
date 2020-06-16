@@ -1,4 +1,6 @@
-package com.mediaproject.android.doumdadgi;
+package com.mediaproject.android.doumdadgi.model;
+
+import com.mediaproject.android.doumdadgi.viewmodel.TimeTableListItemViewModel;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.mediaproject.android.doumdadgi;
+package com.mediaproject.android.doumdadgi.model;
 
 public class AttendanceAccessModel {
 

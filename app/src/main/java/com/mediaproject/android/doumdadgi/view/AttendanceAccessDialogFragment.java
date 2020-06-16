@@ -1,4 +1,4 @@
-package com.mediaproject.android.doumdadgi;
+package com.mediaproject.android.doumdadgi.view;
 
 import android.app.Dialog;
 import android.os.Bundle;
@@ -11,6 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentManager;
+
+import com.mediaproject.android.doumdadgi.R;
+import com.mediaproject.android.doumdadgi.viewmodel.AttendanceAccessViewModel;
 
 public class AttendanceAccessDialogFragment extends DialogFragment {
     private AttendanceAccessViewModel attendanceAccessViewModel;

@@ -1,4 +1,4 @@
-package com.mediaproject.android.doumdadgi;
+package com.mediaproject.android.doumdadgi.view;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,6 +9,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+
+import com.mediaproject.android.doumdadgi.viewmodel.AttendanceViewModel;
+import com.mediaproject.android.doumdadgi.R;
 
 public class AttendanceFragment extends Fragment {
     private AttendanceViewModel attendanceViewModel;

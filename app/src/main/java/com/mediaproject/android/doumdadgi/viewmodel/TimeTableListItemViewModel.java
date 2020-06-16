@@ -1,4 +1,4 @@
-package com.mediaproject.android.doumdadgi;
+package com.mediaproject.android.doumdadgi.viewmodel;
 
 public class TimeTableListItemViewModel {
     private String lecture_name;

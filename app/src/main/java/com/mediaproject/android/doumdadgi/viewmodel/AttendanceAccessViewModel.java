@@ -1,12 +1,12 @@
-package com.mediaproject.android.doumdadgi;
+package com.mediaproject.android.doumdadgi.viewmodel;
 
-import android.app.Dialog;
-import android.content.Context;
 import android.view.View;
 import android.widget.ImageButton;
 
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
+
+import com.mediaproject.android.doumdadgi.model.AttendanceAccessModel;
+import com.mediaproject.android.doumdadgi.R;
 
 public class AttendanceAccessViewModel {
     private View view;

@@ -1,4 +1,4 @@
-package com.mediaproject.android.doumdadgi;
+package com.mediaproject.android.doumdadgi.view.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,9 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.mediaproject.android.doumdadgi.R;
+import com.mediaproject.android.doumdadgi.viewmodel.TimeTableListItemViewModel;
 
 import java.util.ArrayList;
 
