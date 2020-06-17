@@ -8,4 +8,19 @@
     </string>
     <string name="before_access_start">활동 시작</string>
     <string name="before_access_end">활동 종료</string>
+
+    // Firebase E-mail Authentication
+    <string name="email">E-MAIL</string>
+    <string name="password">PASSWORD</string>
+
+    <string name="signin">LOG IN</string>
+    <string name="success_login">로그인 성공</string>
+    <string name="failed_login">로그인 실패</string>
+
+    <string name="toast_msg_empty_email_id">이메일 아이디를 입력하세요</string>
+    <string name="toast_msg_empty_password">비밀번호를 입력하세요</string>
+
+    <string name="signup">Don\'t have an account? Sign Up</string>
+    <string name="success_signup">회원가입 성공</string>
+    <string name="failed_signup">회원가입 실패</string>
 </resources>
