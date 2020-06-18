@@ -32,10 +32,13 @@ public class AttendanceViewModel {
             public void onClick(View v) {
                 AttendanceAccessDialogFragment dialogFragment = new AttendanceAccessDialogFragment();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                dialogFragment.show(transaction, "ATTENDANCE ACCESS DIALOG");
+                /*
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
                 transaction.setCustomAnimations(R.anim.slide_in_up, R.anim.slide_out_down,
                         R.anim.slide_in_up, R.anim.slide_out_down);
                 transaction.add(android.R.id.content, dialogFragment).addToBackStack(null).commit();
+                */
             }
         });
 

@@ -15,4 +15,9 @@
         <!-- Customize your theme here. -->
         <item name="android:windowBackground">@color/colorPrimary</item>
     </style>
+
+    <style name="Animation.WindowSlideUpDown" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/slide_in_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_down</item>
+    </style>
 </resources>
