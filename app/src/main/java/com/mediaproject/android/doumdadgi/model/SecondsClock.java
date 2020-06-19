@@ -1,4 +1,4 @@
-package com.mediaproject.android.doumdadgi.data;
+package com.mediaproject.android.doumdadgi.model;
 
 import android.os.Handler;
 

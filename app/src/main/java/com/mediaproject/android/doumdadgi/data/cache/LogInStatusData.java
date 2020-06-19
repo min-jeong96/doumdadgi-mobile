@@ -3,9 +3,6 @@ package com.mediaproject.android.doumdadgi.data.cache;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import java.util.Arrays;
-import java.util.List;
-
 public class LogInStatusData {
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
@@ -35,15 +32,14 @@ public class LogInStatusData {
         return stay_logged_in;
     }
 
-    public List<String> getEmailAddressAndPassword() {
-        return Arrays.asList(saved_email_address, saved_password);
-    }
-
     public void setLogInnStatus(String address, String password) {
+        this.saved_email_address = address;
+        this.saved_password = password;
+
         this.editor = this.sharedPreferences.edit();
-        editor.putBoolean(IS_STAYING_LOGGED_IN, true);
-        editor.putString(IS_EMAIL_ADDRESS_SAVED, address);
-        editor.putString(IS_PASSWORD_SAVED, password);
-        editor.commit();
+        this.editor.putBoolean(IS_STAYING_LOGGED_IN, true);
+        this.editor.putString(IS_EMAIL_ADDRESS_SAVED, saved_email_address);
+        this.editor.putString(IS_PASSWORD_SAVED, saved_password);
+        this.editor.apply();
     }
 }

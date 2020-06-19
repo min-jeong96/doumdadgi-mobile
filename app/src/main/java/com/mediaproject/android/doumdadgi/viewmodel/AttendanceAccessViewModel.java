@@ -8,10 +8,9 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentManager;
 
-import com.mediaproject.android.doumdadgi.data.SecondsClock;
+import com.mediaproject.android.doumdadgi.model.SecondsClock;
 import com.mediaproject.android.doumdadgi.model.AttendanceAccessModel;
 import com.mediaproject.android.doumdadgi.R;
 

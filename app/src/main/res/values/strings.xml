@@ -19,6 +19,8 @@
 
     <string name="toast_msg_empty_email_id">이메일 아이디를 입력하세요</string>
     <string name="toast_msg_empty_password">비밀번호를 입력하세요</string>
+    <string name="toast_msg_invalid_email_id">유효한 메일 주소가 아닙니다</string>
+    <string name="toast_msg_invalid_password">유효한 비밀번호가 아닙니다</string>
 
     <string name="signup">Don\'t have an account? Sign Up</string>
     <string name="success_signup">회원가입 성공</string>
