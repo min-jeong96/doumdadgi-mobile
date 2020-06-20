@@ -1,12 +1,12 @@
-package com.mediaproject.android.doumdadgi.viewmodel;
+package com.mediaproject.android.doumdadgi.model;
 
-public class TimeTableListItemViewModel {
+public class ClassInfo {
     private String lecture_name;
     private String classroom;
     private String professor;
     private String schedule;
 
-    public TimeTableListItemViewModel(String lecture_name, String classroom, String professor, String schedule) {
+    public ClassInfo(String lecture_name, String classroom, String professor, String schedule) {
         this.lecture_name   = lecture_name;
         this.classroom      = classroom;
         this.professor      = professor;

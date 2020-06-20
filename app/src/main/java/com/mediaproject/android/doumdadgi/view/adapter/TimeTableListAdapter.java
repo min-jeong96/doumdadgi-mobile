@@ -11,12 +11,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.mediaproject.android.doumdadgi.R;
-import com.mediaproject.android.doumdadgi.viewmodel.TimeTableListItemViewModel;
+import com.mediaproject.android.doumdadgi.model.ClassInfo;
 
 import java.util.ArrayList;
 
 public class TimeTableListAdapter extends RecyclerView.Adapter<TimeTableListAdapter.ViewHolder> {
-    private ArrayList<TimeTableListItemViewModel> mData;
+    private ArrayList<ClassInfo> mData;
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView lecture_name;
@@ -33,7 +33,7 @@ public class TimeTableListAdapter extends RecyclerView.Adapter<TimeTableListAdap
         }
     }
 
-    public TimeTableListAdapter(ArrayList<TimeTableListItemViewModel> list) {
+    public TimeTableListAdapter(ArrayList<ClassInfo> list) {
         this.mData = list;
     }
 
@@ -61,8 +61,6 @@ public class TimeTableListAdapter extends RecyclerView.Adapter<TimeTableListAdap
         holder.schedule.setText(mData.get(position).getSchedule());
         holder.professor.setText(mData.get(position).getProfessor());
     }
-
-
 
     @Override
     public int getItemCount() {

@@ -1,7 +1,5 @@
 package com.mediaproject.android.doumdadgi.data.remote;
 
-import android.util.Patterns;
-
 import androidx.annotation.NonNull;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -12,7 +10,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import java.util.concurrent.Executor;
 import java.util.regex.Pattern;
 
-public class FirebaseAuthentication {
+public class FirebaseAuthentication implements Executor {
     // 비밀번호 정규식
     private static final Pattern PASSWORD_PATTERN = Pattern.compile("^[a-zA-Z0-9!@.#$%^&*?_~]{8,16}$");
 
@@ -38,7 +36,7 @@ public class FirebaseAuthentication {
     // 이메일 유효성 검사
     public boolean isValidEmail() {
         // 이메일 형식 불일치
-        return Patterns.EMAIL_ADDRESS.matcher(email).matches();
+        return PASSWORD_PATTERN.matcher(email).matches();
     }
 
     // 비밀번호 유효성 검사
@@ -49,7 +47,8 @@ public class FirebaseAuthentication {
 
     // 회원가입
     public void createUser(String email, String password) {
-        firebaseAuth.createUserWithEmailAndPassword(email, password)
+        String full_email = email + "@ajou.ac.kr";
+        firebaseAuth.createUserWithEmailAndPassword(full_email, password)
                 .addOnCompleteListener((Executor) this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -63,7 +62,7 @@ public class FirebaseAuthentication {
     }
 
     // 로그인
-    public void loginUser(final String email, final String password)
+    public void loginUser(String email, String password)
     {
         firebaseAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener((Executor) this, new OnCompleteListener<AuthResult>() {
@@ -73,8 +72,14 @@ public class FirebaseAuthentication {
                             // 로그인 성공
                         } else {
                             // 로그인 실패
+                            System.out.println("TAG, Login Failure");
                         }
                     }
                 });
+    }
+
+    @Override
+    public void execute(Runnable command) {
+
     }
 }

@@ -1,17 +1,15 @@
 package com.mediaproject.android.doumdadgi.model;
 
-import com.mediaproject.android.doumdadgi.viewmodel.TimeTableListItemViewModel;
-
 import java.util.ArrayList;
 
 public class TimeTableModel {
     // dummy data for test MVVM...
-    ArrayList<TimeTableListItemViewModel> list = new ArrayList<>();
+    ArrayList<ClassInfo> list = new ArrayList<>();
 
-    public ArrayList<TimeTableListItemViewModel> getTimeTableList() {
+    public ArrayList<ClassInfo> getTimeTableList() {
         for (int i = 0; i < 10; i++) {
             String tmp = String.format("TEXT %d", i);
-            list.add(new TimeTableListItemViewModel(tmp, tmp, tmp, tmp));
+            list.add(new ClassInfo(tmp, tmp, tmp, tmp));
         }
 
         return list;

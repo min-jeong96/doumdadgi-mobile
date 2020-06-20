@@ -25,4 +25,8 @@
     <string name="signup">Don\'t have an account? Sign Up</string>
     <string name="success_signup">회원가입 성공</string>
     <string name="failed_signup">회원가입 실패</string>
+
+    // 알림 기능 장애 학생과 비장애 학생 메뉴
+    <string name="menu_notice_requests">모집 내용</string>
+    <string name="menu_notice_appliers">지원자 확인</string>
 </resources>

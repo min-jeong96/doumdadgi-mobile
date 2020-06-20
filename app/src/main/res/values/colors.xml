@@ -5,6 +5,6 @@
     <color name="colorSecondary">#FFAB29</color>
     <color name="colorSecondaryDark">#FB821C</color>
     <color name="colorAccent">#FF2962</color>
-    <color name="colorPrimaryText">#FFFFFF</color>
+    <color name="colorPrimaryText">#333333</color>
     <color name="colorSecondaryText">#AAAAAA</color>
 </resources>

@@ -31,9 +31,8 @@ public class TimeTableViewModel {
 
         TimeTableListAdapter adapter = new TimeTableListAdapter(timeTableModel.getTimeTableList());
         recyclerView.setAdapter(adapter);
-        recyclerView.setHasFixedSize(true);
+        // recyclerView.setHasFixedSize(true);
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         btn_add_lecture = view.findViewById(R.id.btn_add_lecture);
         btn_add_lecture.setOnClickListener(new View.OnClickListener() {
             @Override

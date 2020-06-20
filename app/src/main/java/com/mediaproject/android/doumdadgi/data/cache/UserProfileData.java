@@ -19,11 +19,12 @@ public class UserProfileData {
 
     public UserProfileData (Context context) {
         this.context = context;
+        this.userProfile = new UserProfile();
         getSharedPreferences();
     }
 
     private void getSharedPreferences() {
-        this.sharedPreferences = context.getSharedPreferences(PREFERENCES_NAME, Context.MODE_PRIVATE);
+        this.sharedPreferences = context.getSharedPreferences(PREFERENCES_NAME, context.MODE_PRIVATE);
         this.userProfile.setUserName(sharedPreferences.getString(USER_NAME, ""));
         this.userProfile.setSchoolId(sharedPreferences.getString(SCHOOL_ID, ""));
         this.userProfile.setMajor(sharedPreferences.getString(MAJOR, ""));

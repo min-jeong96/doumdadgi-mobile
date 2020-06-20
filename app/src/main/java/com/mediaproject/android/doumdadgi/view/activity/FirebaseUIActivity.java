@@ -95,7 +95,7 @@ public class FirebaseUIActivity extends AppCompatActivity {
     }
 
     public boolean signIn() {
-        email = editTextEmail.getText().toString() + "@ajou.ac.kr";
+        email = editTextEmail.getText().toString();
         password = editTextPassword.getText().toString();
 
         auth.setEmail(email);
@@ -105,7 +105,7 @@ public class FirebaseUIActivity extends AppCompatActivity {
             Toast.makeText(FirebaseUIActivity.this, R.string.toast_msg_empty_email_id,
                     Toast.LENGTH_SHORT).show();
             return false;
-        } else if (auth.isValidEmail()) {
+        } else if (!auth.isValidEmail()) {
             Toast.makeText(FirebaseUIActivity.this, R.string.toast_msg_invalid_email_id,
                     Toast.LENGTH_SHORT).show();
             return false;
@@ -115,7 +115,7 @@ public class FirebaseUIActivity extends AppCompatActivity {
             Toast.makeText(FirebaseUIActivity.this, R.string.toast_msg_empty_password,
                     Toast.LENGTH_SHORT).show();
             return false;
-        } else if (auth.isValidPasswd()) {
+        } else if (!auth.isValidPasswd()) {
             Toast.makeText(FirebaseUIActivity.this, R.string.toast_msg_invalid_password,
                     Toast.LENGTH_SHORT).show();
             return false;
