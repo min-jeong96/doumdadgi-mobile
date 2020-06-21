@@ -23,7 +23,7 @@ public class LogInStatusData {
 
     private void getSharedPreferences() {
         this.sharedPreferences = context.getSharedPreferences(PREFERENCES_NAME, context.MODE_PRIVATE);
-        stay_logged_in = sharedPreferences.getBoolean(IS_STAYING_LOGGED_IN, false);
+        stay_logged_in = sharedPreferences.getBoolean(IS_STAYING_LOGGED_IN, true);
         saved_email_address = sharedPreferences.getString(IS_EMAIL_ADDRESS_SAVED, "");
         saved_password = sharedPreferences.getString(IS_PASSWORD_SAVED, "");
     }
@@ -32,12 +32,18 @@ public class LogInStatusData {
         return stay_logged_in;
     }
 
-    public void setLogInnStatus(String address, String password) {
+    public void setLogInStatus(Boolean is_staying) {
+        this.editor = this.sharedPreferences.edit();
+        this.editor.putBoolean(IS_STAYING_LOGGED_IN, is_staying);
+        this.editor.apply();
+    }
+
+    public void setLogInStatusData(Boolean is_staying, String address, String password) {
         this.saved_email_address = address;
         this.saved_password = password;
 
         this.editor = this.sharedPreferences.edit();
-        this.editor.putBoolean(IS_STAYING_LOGGED_IN, true);
+        this.editor.putBoolean(IS_STAYING_LOGGED_IN, is_staying);
         this.editor.putString(IS_EMAIL_ADDRESS_SAVED, saved_email_address);
         this.editor.putString(IS_PASSWORD_SAVED, saved_password);
         this.editor.apply();

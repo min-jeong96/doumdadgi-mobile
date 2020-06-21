@@ -7,4 +7,5 @@
     <color name="colorAccent">#FF2962</color>
     <color name="colorPrimaryText">#333333</color>
     <color name="colorSecondaryText">#AAAAAA</color>
+    <color name="colorWhite">#FFFFFF</color>
 </resources>

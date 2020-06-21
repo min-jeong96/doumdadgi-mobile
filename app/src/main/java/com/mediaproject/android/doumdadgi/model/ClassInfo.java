@@ -6,6 +6,13 @@ public class ClassInfo {
     private String professor;
     private String schedule;
 
+    public ClassInfo(String lecture_name, String classroom, String schedule) {
+        this.lecture_name = lecture_name;
+        this.classroom = classroom;
+        this.professor = "";
+        this.schedule = schedule;
+    }
+
     public ClassInfo(String lecture_name, String classroom, String professor, String schedule) {
         this.lecture_name   = lecture_name;
         this.classroom      = classroom;

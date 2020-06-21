@@ -22,10 +22,10 @@ public class TimeTableViewModel {
     public TimeTableViewModel(View view) {
         this.view = view;
         this.timeTableModel = new TimeTableModel();
-        initView(view);
+        initView();
     }
 
-    private void initView(View view) {
+    private void initView() {
         recyclerView = view.findViewById(R.id.list_timetable);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 

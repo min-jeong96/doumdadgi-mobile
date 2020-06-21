@@ -17,6 +17,7 @@
     <string name="success_login">로그인 성공</string>
     <string name="failed_login">로그인 실패</string>
 
+    <string name="toast_msg_empty_phone_number">연락처를 입력하세요</string>
     <string name="toast_msg_empty_email_id">이메일 아이디를 입력하세요</string>
     <string name="toast_msg_empty_password">비밀번호를 입력하세요</string>
     <string name="toast_msg_invalid_email_id">유효한 메일 주소가 아닙니다</string>
@@ -29,4 +30,12 @@
     // 알림 기능 장애 학생과 비장애 학생 메뉴
     <string name="menu_notice_requests">모집 내용</string>
     <string name="menu_notice_appliers">지원자 확인</string>
+
+    <string name="chip_in_dormitory">기숙사</string>
+    <string name="chip_not_in_dormitory">통학</string>
+
+    <string-array name="majors">
+        <item>미디어학과</item>
+        <item>소프트웨어학과</item>
+    </string-array>
 </resources>

@@ -15,11 +15,11 @@ import com.mediaproject.android.doumdadgi.R;
 import com.mediaproject.android.doumdadgi.data.cache.LogInStatusData;
 import com.mediaproject.android.doumdadgi.data.cache.UserProfileData;
 import com.mediaproject.android.doumdadgi.data.remote.FirebaseAuthentication;
-import com.mediaproject.android.doumdadgi.data.remote.FirebaseUserDetail;
+import com.mediaproject.android.doumdadgi.data.remote.FirestoreUserDetail;
 
 public class FirebaseUIActivity extends AppCompatActivity {
     private FirebaseAuthentication auth;
-    private FirebaseUserDetail user;
+    private FirestoreUserDetail user;
 
     // 이메일과 비밀번호
     private EditText editTextEmail;
@@ -41,7 +41,7 @@ public class FirebaseUIActivity extends AppCompatActivity {
         logInStatusData = new LogInStatusData(this);
         userProfileData = new UserProfileData(this);
         auth = new FirebaseAuthentication();
-        user = new FirebaseUserDetail();
+        user = new FirestoreUserDetail();
 
         editTextEmail = findViewById(R.id.text_eamil_id);
         editTextPassword = findViewById(R.id.text_password);
@@ -122,7 +122,7 @@ public class FirebaseUIActivity extends AppCompatActivity {
         }
 
         auth.loginUser(email, password);
-        logInStatusData.setLogInnStatus(email, password);
+        logInStatusData.setLogInStatusData(true, email, password);
         startMainActivity();
         return true;
     }

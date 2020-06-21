@@ -8,7 +8,7 @@
     android:background="@drawable/lecture_border_round">
 
     <TextView
-        android:id="@+id/text_lecture_name"
+        android:id="@+id/text_request_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -20,37 +20,53 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/text_professor"
+        android:id="@+id/text_request_professor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
         android:text="TextView"
         android:textColor="@color/colorSecondary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/text_lecture_name"
-        app:layout_constraintTop_toBottomOf="@id/text_lecture_name" />
+        app:layout_constraintBottom_toTopOf="@+id/btn_apply_request"
+        app:layout_constraintStart_toStartOf="@+id/text_request_name"
+        app:layout_constraintTop_toBottomOf="@id/text_request_name" />
 
     <TextView
-        android:id="@+id/text_schedule"
+        android:id="@+id/text_reqeust_schedule"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="TextView"
         android:textColor="@color/colorSecondaryText"
-        app:layout_constraintBottom_toBottomOf="@+id/text_professor"
-        app:layout_constraintStart_toEndOf="@+id/text_professor"
-        app:layout_constraintTop_toTopOf="@+id/text_professor" />
+        app:layout_constraintBottom_toBottomOf="@+id/text_request_professor"
+        app:layout_constraintStart_toEndOf="@+id/text_request_professor"
+        app:layout_constraintTop_toTopOf="@+id/text_request_professor" />
 
     <TextView
-        android:id="@+id/text_classroom"
+        android:id="@+id/text_request_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="TextView"
         android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintBottom_toBottomOf="@+id/text_lecture_name"
-        app:layout_constraintStart_toEndOf="@+id/text_lecture_name"
-        app:layout_constraintTop_toTopOf="@+id/text_lecture_name" />
+        app:layout_constraintBottom_toBottomOf="@+id/text_request_name"
+        app:layout_constraintStart_toEndOf="@+id/text_request_name"
+        app:layout_constraintTop_toTopOf="@+id/text_request_name" />
+
+    <Button
+        android:id="@+id/btn_apply_request"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/btn_before_applying"
+        android:clickable="true"
+        android:text="지원하기"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

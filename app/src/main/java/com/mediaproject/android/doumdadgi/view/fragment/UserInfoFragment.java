@@ -10,12 +10,17 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.mediaproject.android.doumdadgi.R;
+import com.mediaproject.android.doumdadgi.viewmodel.UserInfoViewModel;
 
 public class UserInfoFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        return inflater.inflate(R.layout.fragment_userinfo, container, false);
+        View view = inflater.inflate(R.layout.fragment_userinfo, container, false);
+
+        UserInfoViewModel userInfoViewModel = new UserInfoViewModel(view);
+
+        return view;
     }
 }

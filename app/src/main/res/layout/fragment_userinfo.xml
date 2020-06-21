@@ -1,11 +1,254 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView_email"
-        android:layout_width="match_parent"
+        android:id="@+id/text_user_name"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="내 정보" />
-</LinearLayout>
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:text="TextView"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_user_school_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/text_user_name"
+        app:layout_constraintStart_toStartOf="@+id/text_user_name"
+        app:layout_constraintTop_toBottomOf="@+id/text_user_name" />
+
+    <TextView
+        android:id="@+id/text_user_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/text_user_school_id"
+        app:layout_constraintStart_toStartOf="@+id/text_user_school_id"
+        app:layout_constraintTop_toBottomOf="@+id/text_user_school_id" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="@+id/text_user_email"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/text_user_email"
+        app:layout_constraintTop_toBottomOf="@+id/text_user_email" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="상세 정보"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/text_user_email"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="전공"
+        android:textColor="@color/colorPrimaryText"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <Spinner
+        android:id="@+id/spinner_major"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textView13"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup_user_sex"
+        app:layout_constraintTop_toTopOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="성별"
+        android:textColor="@color/colorPrimaryText"
+        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_major" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_user_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup_user_in_dorm"
+        app:layout_constraintTop_toTopOf="@+id/textView9">
+
+        <RadioButton
+            android:id="@+id/radio_btn_sex_male"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="남성"
+            android:textColor="@color/colorPrimaryText" />
+
+        <RadioButton
+            android:id="@+id/radio_btn_sex_female"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="여성" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="거주 유형"
+        android:textColor="@color/colorPrimaryText"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_user_sex" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_user_in_dorm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/textView11"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView11">
+
+        <RadioButton
+            android:id="@+id/radio_btn_in_dorm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="기숙사" />
+
+        <RadioButton
+            android:id="@+id/radio_btn_not_in_dorm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="통학" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="연락처"
+        android:textColor="@color/colorPrimaryText"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_user_in_dorm" />
+
+    <EditText
+        android:id="@+id/editText_user_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="010-0000-0000"
+        android:inputType="phone"
+        android:textColor="@color/colorPrimaryText"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup_user_in_dorm"
+        app:layout_constraintTop_toTopOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="16dp"
+        android:text="자동 로그인"
+        android:textColor="@color/colorPrimaryText"
+        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/editText_user_phone_number" />
+
+    <Switch
+        android:id="@+id/switch_auto_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/editText_user_phone_number"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/btn_user_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/btn_before_applying"
+        android:text="수정하기"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toTopOf="@+id/btns_edit"
+        app:layout_constraintEnd_toEndOf="@+id/btn_log_out"
+        app:layout_constraintStart_toStartOf="@+id/btn_log_out" />
+
+    <LinearLayout
+        android:id="@+id/btns_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/btn_log_out"
+        app:layout_constraintEnd_toEndOf="@+id/btn_log_out"
+        app:layout_constraintStart_toStartOf="@+id/btn_log_out">
+
+        <Button
+            android:id="@+id/btn_user_edit_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/btn_after_applying"
+            android:text="취소"
+            android:textColor="@color/colorPrimaryText" />
+
+        <Button
+            android:id="@+id/btn_user_edit_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/btn_before_applying"
+            android:text="완료"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_log_out"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/btn_before_applying"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="로그아웃"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

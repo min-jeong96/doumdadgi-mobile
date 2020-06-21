@@ -22,10 +22,10 @@ public class AttendanceViewModel {
         this.view = view;
         this.fragmentManager = fragmentManager;
         this.attendanceModel = new AttendanceModel();
-        initView(view);
+        initView();
     }
 
-    private void initView(View view) {
+    private void initView() {
         btn_access_attendance = view.findViewById(R.id.btn_access_attendance);
         btn_access_attendance.setOnClickListener(new View.OnClickListener() {
             @Override

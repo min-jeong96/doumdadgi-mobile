@@ -41,10 +41,10 @@ public class AttendanceAccessViewModel {
         this.clock = new SecondsClock(handler);
 
         this.attendanceAccessModel = new AttendanceAccessModel();
-        initView(view);
+        initView();
     }
 
-    private void initView(View view) {
+    private void initView() {
         btn_close_access_dialog = view.findViewById(R.id.btn_close_access_dialog);
         btn_close_access_dialog.setOnClickListener(new View.OnClickListener() {
             @Override

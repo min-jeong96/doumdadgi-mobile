@@ -15,7 +15,7 @@ import com.mediaproject.android.doumdadgi.model.Notice;
 import java.util.ArrayList;
 
 public class NoticeListAdapter extends RecyclerView.Adapter<NoticeListAdapter.ViewHolder> {
-    public ArrayList<Notice> notices;
+    private ArrayList<Notice> notices;
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView text_notice_title;

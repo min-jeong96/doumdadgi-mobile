@@ -12,12 +12,12 @@ import com.mediaproject.android.doumdadgi.model.UserProfile;
 
 import static androidx.constraintlayout.widget.Constraints.TAG;
 
-public class FirebaseUserDetail {
+public class FirestoreUserDetail {
     private FirebaseFirestore db;
     private String email_id;
     private UserProfile userProfile;
 
-    public FirebaseUserDetail() {
+    public FirestoreUserDetail() {
         db = FirebaseFirestore.getInstance();
         userProfile = new UserProfile();
     }
