@@ -59,7 +59,6 @@ public class UserInfoViewModel {
         spinner_major = view.findViewById(R.id.spinner_major);
         ArrayAdapter majorAdapter = ArrayAdapter.createFromResource(view.getContext(), R.array.majors,
                 android.R.layout.simple_spinner_dropdown_item);
-        // majorAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner_major.setAdapter(majorAdapter);
         spinner_major.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

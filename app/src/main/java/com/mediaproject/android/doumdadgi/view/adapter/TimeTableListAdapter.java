@@ -20,14 +20,12 @@ public class TimeTableListAdapter extends RecyclerView.Adapter<TimeTableListAdap
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView lecture_name;
-        TextView classroom;
         TextView schedule;
         TextView professor;
 
         public ViewHolder(View itemView) {
             super(itemView);
             lecture_name = itemView.findViewById(R.id.text_lecture_name);
-            classroom = itemView.findViewById(R.id.text_classroom);
             schedule = itemView.findViewById(R.id.text_schedule);
             professor = itemView.findViewById(R.id.text_professor);
         }
@@ -57,7 +55,6 @@ public class TimeTableListAdapter extends RecyclerView.Adapter<TimeTableListAdap
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.lecture_name.setText(mData.get(position).getLectureName());
-        holder.classroom.setText(mData.get(position).getClassroom());
         holder.schedule.setText(mData.get(position).getSchedule());
         holder.professor.setText(mData.get(position).getProfessor());
     }

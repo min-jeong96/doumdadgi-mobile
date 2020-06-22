@@ -9,13 +9,13 @@
 
     <ImageView
         android:id="@+id/image_icon"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         app:layout_constraintBottom_toTopOf="@+id/frameLayout_login"
         app:layout_constraintEnd_toEndOf="@+id/frameLayout_login"
         app:layout_constraintStart_toStartOf="@+id/frameLayout_login"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/googleg_standard_color_18" />
+        app:srcCompat="@drawable/ic_jump_white" />
 
     <Button
         android:id="@+id/btn_log_in"

@@ -10,9 +10,11 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.mediaproject.android.doumdadgi.model.UserProfile;
 
+import java.util.concurrent.Executor;
+
 import static androidx.constraintlayout.widget.Constraints.TAG;
 
-public class FirestoreUserDetail {
+public class FirestoreUserDetail implements Executor {
     private FirebaseFirestore db;
     private String email_id;
     private UserProfile userProfile;
@@ -52,5 +54,10 @@ public class FirestoreUserDetail {
                 userProfile = documentSnapshot.toObject(UserProfile.class);
             }
         });
+    }
+
+    @Override
+    public void execute(Runnable command) {
+
     }
 }

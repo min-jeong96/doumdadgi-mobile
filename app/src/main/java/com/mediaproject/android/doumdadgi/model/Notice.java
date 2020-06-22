@@ -18,4 +18,9 @@ public class Notice {
     public String getDescription () { return this.description; }
     public String getDepartment () { return this.department; }
     public String getDateAndTime() { return this.date_and_time; }
+
+    public void setTitle(String title) { this.title = title; }
+    public void setDescription(String description) { this.description = description; }
+    public void setDepartment(String department) { this.department = department; }
+    public void setDateAndTime(String date_and_time) { this.date_and_time = date_and_time; }
 }

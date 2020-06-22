@@ -1,20 +1,21 @@
 package com.mediaproject.android.doumdadgi.model;
 
+import com.mediaproject.android.doumdadgi.data.remote.FirestoreNotice;
+
 import java.util.ArrayList;
 
 public class NoticeModel {
     // dummy data for test MVVM...
     private ArrayList<Notice> notices;
+    private FirestoreNotice firestoreNotice;
 
     public NoticeModel() {
-        notices = new ArrayList<>();
+        firestoreNotice = new FirestoreNotice();
+        notices = firestoreNotice.getNotices();
     }
 
     public ArrayList<Notice> getNotices() {
-        for (int i = 0; i < 10; i++) {
-            String tmp = String.format("TEXT %d", i);
-            notices.add(new Notice(tmp, tmp, tmp, tmp));
-        }
+        System.out.println("NoticeModel --> notices.size() == "+notices.size());
         return notices;
     }
 }

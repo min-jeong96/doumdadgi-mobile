@@ -8,14 +8,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.mediaproject.android.doumdadgi.R;
-import com.mediaproject.android.doumdadgi.model.NoticeModel;
+import com.mediaproject.android.doumdadgi.data.remote.FirestoreNotice;
 import com.mediaproject.android.doumdadgi.model.RequestModel;
 import com.mediaproject.android.doumdadgi.view.adapter.NoticeListAdapter;
 import com.mediaproject.android.doumdadgi.view.adapter.RequestListAdapter;
 
 public class NoticeViewModel {
     private View view;
-    private NoticeModel noticeModel;
+    private FirestoreNotice notices;
     private RequestModel requestModel;
 
     private View divider_menu_notice;
@@ -23,10 +23,11 @@ public class NoticeViewModel {
     private TextView text_menu_notice;
     private TextView text_menu_partner_matching;
     private RecyclerView recyclerView;
+    private NoticeListAdapter adapter;
 
     public NoticeViewModel(View view) {
         this.view = view;
-        this.noticeModel = new NoticeModel();
+        this.notices = new FirestoreNotice();
         this.requestModel = new RequestModel();
         initView();
     }
@@ -36,7 +37,7 @@ public class NoticeViewModel {
         recyclerView = view.findViewById(R.id.list_notice);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
-        NoticeListAdapter adapter = new NoticeListAdapter((noticeModel.getNotices()));
+        adapter = new NoticeListAdapter((notices.getNotices()));
         recyclerView.setAdapter(adapter);
 
         final int clicked_color = view.getContext().getResources().getColor(R.color.colorPrimary, null);
@@ -49,7 +50,7 @@ public class NoticeViewModel {
         text_menu_notice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NoticeListAdapter adapter = new NoticeListAdapter(noticeModel.getNotices());
+                NoticeListAdapter adapter = new NoticeListAdapter(notices.getNotices());
                 recyclerView.setAdapter(adapter);
 
                 text_menu_notice.setTypeface(null, Typeface.BOLD);
@@ -75,5 +76,7 @@ public class NoticeViewModel {
                 divider_menu_notice.setVisibility(View.INVISIBLE);
             }
         });
+
+        text_menu_partner_matching.performClick();
     }
 }
